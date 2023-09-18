@@ -10,6 +10,7 @@
 
 int main(void) {
 	ImBase::Window::Init(600, 480, "Lmao Ass");
+	ImBase::Window::SetMaxFPS(50);
 
 	#define GenValInRange(min, max) (rand() % (max + 1 - min) + min)
 	constexpr int TexWidth = 128;
@@ -36,6 +37,8 @@ int main(void) {
 			}
 			ImGui::EndMainMenuBar();
 		}
+
+		ImGui::ShowMetricsWindow();
 
 		for (int y = 0; y < TexHeight; y++) {
 			for (int x = 0; x < TexWidth; x++) {
