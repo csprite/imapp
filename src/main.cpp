@@ -20,7 +20,7 @@ int main(void) {
 	unsigned char pixels[TexWidth * TexHeight * 4] = { 255 };
 	memset(&pixels, 255, TexWidth * TexHeight * 4);
 
-	ImBase::Texture Tex(TexWidth, TexHeight, pixels);
+	ImBase::Texture Tex(TexWidth, TexHeight, pixels, ImBase::TScaleFunc::Nearest);
 
 	srand(time(NULL));
 	while (!ImBase::Window::ShouldClose()) {
